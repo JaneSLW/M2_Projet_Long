@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# Script name 	: bed_to_vector_init.sh
+# Description	: This program allows to build a binary vector for each read
+# from the alignment results. It divides the bed file based on the length of
+# the exons. Each file will be filtered by a threshold alignement score which
+# defines the presence or absence of the exon. Then only the reads that start
+# with either the first or third exon and end with the 20th or last exon are 
+# kept.
+#
+# Author	: Jane Schadtler-Law
+# Date	: 2023-03-27
+
+
 REFNAME=${1}	#$1 reference
 WDIR=${2}	# working directory
 BEDold=${3}	# bed file
